@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>怡红院</title>
+</head>
+<script type="application/javascript">
+    window.onload = function () {
+        let closeable = window.localStorage.getItem("closeable");
+        if (closeable == "true") {
+            window.close();
+            window.localStorage.removeItem("closeable");
+        }
+    }
+</script>
+<body>
+<!--导入相关依赖-->
+<div th:insert="~{publicigation/public:: PublicDependence-01}"></div>
+<!--顶部开始-->
+<div th:insert="~{publicigation/navigation :: nav}"></div>
+<!--顶部结束-->
+<!--类容展示区开始-->
+<div class="container-fluid main">
+    <div class="row w">
+        <!--        左侧导航栏-->
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12" style="padding: 20px">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+                <div class="layui-field-box fieldset-size">
+                    <i class="fa fa-address-card-o comment-sp" aria-hidden="true"></i>
+                    我的订阅
+                </div>
+                <div class="layui-field-box fieldset-size">
+                    <i class="layui-icon layui-icon-praise comment-sp"></i>
+                    近期热门
+                </div>
+                <div class="layui-field-box fieldset-size">
+                    <i class="fa fa-globe comment-sp" aria-hidden="true"></i>
+                    最新类容
+                </div>
+                <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+                    <legend>技术频道</legend>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-first-order comment-sp" style="color: #825DC5" aria-hidden="true"></i>
+                        人工智能
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-sliders comment-sp" style="color: #009BBF" aria-hidden="true"></i>
+                        Arm大计算
+                    </div>
+                </fieldset>
+                <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+                    <legend>技术社区</legend>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-html5 comment-sp" style="color: #F8E71B" aria-hidden="true"></i>
+                        前端
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-database comment-sp" style="color: #0052CC" aria-hidden="true"></i>
+                        后端
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-weixin comment-sp" style="color: #2BA346" aria-hidden="true"></i>
+                        小程序
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-apple comment-sp" aria-hidden="true"></i>
+                        ios
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-android comment-sp" style="color: #76C451" aria-hidden="true"></i>
+                        Android
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-github-alt comment-sp" style="color: #1E94FD" aria-hidden="true"></i>
+                        AI
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-cloud comment-sp" style="color: #2049F4" aria-hidden="true"></i>
+                        云计算
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-codiepie comment-sp" style="color: #FFC107" aria-hidden="true"></i>
+                        游戏
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class=" layui-icon layui-icon-auz comment-sp" style="color: #3FA143"></i>
+                        安全
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-superpowers comment-sp" style="color: #1B7ED9" aria-hidden="true"></i>
+                        金融科技
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-sitemap comment-sp" style="color: #2096F1" aria-hidden="true"></i>
+                        区块链
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-github comment-sp" style="color: #77C684" aria-hidden="true"></i>
+                        开源
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="layui-icon layui-icon-util comment-sp" style="color: #4B91E4"></i>
+                        工具
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-user-circle comment-sp" style="color: #8B572B" aria-hidden="true"></i>
+                        程序员
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-industry comment-sp" style="color: #F5A623;" aria-hidden="true"></i>
+                        行业
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="layui-icon layui-icon-template comment-sp" style="color: #009A61"></i>
+                        SF官方
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-tags comment-sp" aria-hidden="true"></i>
+                        更多标签
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="padding: 10px 0 0 30px">
+            <div class="layui-carousel" id="test1" style="margin-top: 15px;">
+                <div carousel-item="">
+                    <div><img th:src="@{/images/img/20200321.jpg}" style="width: 100%;"/></div>
+                    <div><img th:src="@{/images/img/20200413.jpg}" style="width: 100%;"/></div>
+                    <div><img th:src="@{/images/img/20200429.jpg}" style="width: 100%;"/></div>
+                    <div><img th:src="@{/images/img/20200501.jpg}" style="width: 100%;"/></div>
+                    <div><img th:src="@{/images/img/20200522.jpg}" style="width: 100%;"/></div>
+                </div>
+            </div>
+
+            <script>
+                layui.use('carousel', function () {
+                    var carousel = layui.carousel;
+                    //建造实例
+                    carousel.render({
+                        elem: '#test1'
+                        , width: '100%' //设置容器宽度
+                        , height: '140px'
+                        , arrow: 'always' //始终显示箭头
+                        // ,anim: 'fade' //切换动画方式
+                    });
+                });
+                var $ = layui.$, active = {
+                    set: function (othis) {
+                        var THIS = 'layui-bg-normal'
+                            , key = othis.data('key')
+                            , options = {};
+
+                        othis.css('background-color', '#5FB878').siblings().removeAttr('style');
+                        options[key] = othis.data('value');
+                        ins3.reload(options);
+                    }
+                };
+            </script>
+
+            <div class="media" th:each="articleDeList:${articleDetailsDTOS}">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object img-circle"
+                             th:src="${articleDeList.avatarUrl}">
+                    </a>
+                </div>
+
+                <div class="media-body">
+                    <h4 class="media-heading bain-2">
+                        <a class="a-biaoti" th:href="@{'/question/'+${articleDeList.id}}"
+                           th:text="${articleDeList.title}"></a>
+                    </h4>
+                    <h4 class="media-heading" th:text="${articleDeList.id}" style="float: right"></h4>
+                    <span class="hideText" th:text="${articleDeList.description}"></span> </br>
+                    <span class="text-desc">
+                        <i class="fa fa-user" aria-hidden="true"title="楼主" style="color:#8362C6"></i>
+<!--                        <span class="glyphicon glyphicon-user" style="color: darkviolet"></span>-->
+                         <span th:text="${articleDeList.name}"></span>&nbsp;
+                         <i class="fa fa-eye" aria-hidden="true" title="浏览" style="color: #009BBF"></i>
+                       <span th:text="${articleDeList.viewCount}"></span>&nbsp;
+                          <i class="fa fa-commenting-o" aria-hidden="true" title="回复"
+                             style="color: #009A61;margin-left: 4px;"></i>
+                      <span th:text="${articleDeList.replyCount}"></span>&nbsp;
+                      <span class="glyphicon glyphicon-thumbs-up" title="点赞"
+                            style="color: #009A61;margin-left: 4px;"></span>
+                        <span th:text="${articleDeList.likeCount}"></span>&nbsp;
+                        <span style="color:#009A61" th:text="${#dates.format(articleDeList.gmtCreate,'yyyy-MM月dd日 ')}"></span>
+                    </span>
+                </div>
+                <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #EBF7F3;">
+            </div>
+            <!--类容展示区结束-->
+            <!--            分页导航开始-->
+            <nav aria-label="Page navigation" style="float: right">
+                <ul class="pagination">
+                    <li th:if="${pages.showPrevious}">
+                        <a th:href="@{/(page=${1},title=${title},tag=${tag})}" aria-label="Previous">
+                            <span aria-hidden="true">&lt;&lt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${pages.showFirstPage}">
+                        <a th:href="@{/(page=${pages.page -1},title=${title})}" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <li th:each="pagesList:${pages.getPages()}" th:class="${pages.page==page}?'active':''">
+                        <a th:href="@{/(page=${pagesList},title=${title},tag=${tag})}" th:text="${pagesList}">
+
+                        </a>
+                    </li>
+
+                    <li th:if="${pages.showNext}">
+                        <a th:href="@{/(page=${pages.page+1},title=${title},tag=${tag})}" aria-label="Previous">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${pages.showEndPage}">
+                        <a th:href="@{/(page=${pages.totalPage},title=${title},tag=${tag})}" aria-label="Previous">
+                            <span aria-hidden="true">&gt;&gt;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!--            分页导航结束-->
+        </div>
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+            <div style="padding: 20px">
+                <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold">怡红院源码仓库地址</h4>
+                <a href="https://gitee.com/jade_purple" title="怡红院源码git ee仓库地址">
+                    <img class="img-thumbnail question-wechat" src="/images/QRcode.jpg">
+                </a>
+            </div>
+            <div style="padding: 0 20px">
+                <!--            相关问题-->
+                <h4 style="font-weight: bolder">热门标签</h4>
+                <ul class="question-related">
+                    <li th:each="tag:${tags}" class="index-tag">
+                        <span class="label label-info" style="background-color: #2ecc71">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                        <a th:href="@{/(page=${1},title=${title},tag=${tag})}" th:text="${tag}"
+                           style="color:#FFFFFF"></a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div th:insert="~{publicigation/footer :: foot}"></div>
+</body>
+</html>

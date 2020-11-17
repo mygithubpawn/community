@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${sectionName}"></title>
+
+</head>
+<body style="background-color: #E9ECEF">
+<!--导入相关依赖-->
+<div th:insert="~{publicigation/public:: PublicDependence-01}"></div>
+<!--顶部开始-->
+<div th:insert="~{publicigation/navigation :: nav}"></div>
+<!--顶部结束-->
+<!--类容展示区开始-->
+<div class="container-fluid main profile">
+    <div class="row w" style="border-radius: 6px;background-color:#E9ECEF;">
+        <!--        左侧-->
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title" style="border-right: 20px solid #E9ECEF">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marto-size">
+                <ul>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>w</li>
+                    <li>w</li>
+                    <li>D</li>
+                    <li>D</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="background-color: #FFFFFF;">
+            <h2 style="margin-top: 10px"><span th:text="${sectionName}"></span></h2>
+            <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #95D1BA">
+            <!--            我的文章-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marto-size" th:if="${section=='pawn'}">
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item" th:each="articleDeList:${articleWhereDe}">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content ">
+                            <h3 class="layui-timeline-title"
+                                th:text="${#dates.format(articleDeList.gmtCreate,'yyyy-MM月dd日')}"></h3>
+                            <p class="width-slh">
+                            <div class="bain-2">
+                                <a class="a-biaoti" th:href="@{'/question/'+${articleDeList.id}}"
+                                   th:text="${articleDeList.title}"></a>
+                            </div>
+                            <div class="bain-1">
+                            <span style="font－family:宋体" th:text="${articleDeList.description}"></span>
+                            </div>
+                            </br>
+                            <span class="text-desc">
+                                    <i class="fa fa-eye" aria-hidden="true" title="浏览" style="color: #009A61"></i>
+                                    <span th:text="${articleDeList.viewCount}"></span>
+                                       <span class="glyphicon glyphicon-thumbs-up" title="点赞"
+                                             style="color: #009A61;margin-left: 4px;"></span>
+                                    <span th:text="${articleDeList.likeCount}"></span>
+                                    <i class="fa fa-commenting-o" aria-hidden="true" title="回复"
+                                       style="color: #009A61;margin-left: 4px;"></i>
+                                    <span th:text="${articleDeList.commentCount}"></span>
+                                </span>
+                            <br>
+                            </p>
+                            <a class="community-menu" th:href="@{'/publish/'+${articleDeList.id}}"
+                               th:if="${session.user.id !=null && session.user.id==articleDeList.creator}"
+                               style="float: right">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                编辑
+                            </a>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <div class="layui-timeline-title">
+                            <h3 style="color:#009A61;font-weight: bold">过去</h3></div>
+                        </div>
+                    </li>
+                </ul>
+                <!--类容展示区结束-->
+                <!--            分页导航开始-->
+                <nav aria-label="Page navigation" style="float: right">
+                    <ul class="pagination">
+                        <li th:if="${pages.showPrevious}">
+                            <a th:href="@{'/profile/'+${section}(page=${1})}" aria-label="Previous">
+                                <span aria-hidden="true">&lt;&lt;</span>
+                            </a>
+                        </li>
+                        <li th:if="${pages.showFirstPage}">
+                            <a th:href="@{'/profile/'+${section}(page=${pages.page -1})}" aria-label="Previous">
+                                <span aria-hidden="true">&lt;</span>
+                            </a>
+                        </li>
+                        <li th:each="pagesList:${pages.getPages()}" th:class="${pages.page==page}?'active':''">
+                            <a th:href="@{'/profile/'+${section}(page=${pagesList})}" th:text="${pagesList}">
+
+                            </a>
+                        </li>
+
+                        <li th:if="${pages.showNext}">
+                            <a th:href="@{'/profile/'+${section}(page=${pages.page+1})}" aria-label="Previous">
+                                <span aria-hidden="true">&gt;</span>
+                            </a>
+                        </li>
+                        <li th:if="${pages.showEndPage}">
+                            <a th:href="@{'/profile/'+${section}(page=${pages.totalPage})}" aria-label="Previous">
+                                <span aria-hidden="true">&gt;&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--            分页导航结束-->
+            </div>
+            <!--            最新回复-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marto-size" th:if="${section=='replies'}">
+                <div class="media" th:each="ReplyToReminder:${ReplyToReminder}">
+                    <div class="media-body" style="width: 900px;">
+                        <div style="width: 800px;">
+                            <a class="huif-size" th:href="'/question/'+${ReplyToReminder.id}" th:text="${ReplyToReminder.userName}"></a>
+
+                            <span style="color: #34495e;font-size: 20px;font-weight: bold" th:text="${ReplyToReminder.type=='1'}?'回复了您的文章':'回复了您的评论'"></span>
+<!--                            <div class="biaoti-wen">-->
+                            <a class="biaoti-wen" th:href="'/notification/'+${ReplyToReminder.id}"
+                               th:text="'《'+${ReplyToReminder.title}+'》'" onclick="showSelectTAag()"></a>
+<!--                            </div>-->
+
+                            <span class="glyphicon glyphicon-check"
+                                  th:style="${ReplyToReminder.status==0}?'color: red':'color: lime'"></span>
+                        </div>
+                        <div class="menu">
+                             <span class="pull-right"
+                                   th:text="${#dates.format(ReplyToReminder.gmtCreate,'yyyy-MM-dd HH:mm')}">
+                             </span>
+                        </div>
+                    </div>
+                    <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+                <!--            分页导航开始-->
+                <nav aria-label="Page navigation" class="pull-right">
+                    <ul class="pagination">
+                        <li th:if="${pages.showPrevious}">
+                            <a th:href="@{'/profile/'+${section}(page=${1})}" aria-label="Previous">
+                                <span aria-hidden="true">&lt;&lt;</span>
+                            </a>
+                        </li>
+                        <li th:if="${pages.showFirstPage}">
+                            <a th:href="@{'/profile/'+${section}(page=${pages.page -1})}" aria-label="Previous">
+                                <span aria-hidden="true">&lt;</span>
+                            </a>
+                        </li>
+                        <li th:each="pagesList:${pages.getPages()}" th:class="${pages.page==page}?'active':''">
+                            <a th:href="@{'/profile/'+${section}(page=${pagesList})}" th:text="${pagesList}">
+
+                            </a>
+                        </li>
+
+                        <li th:if="${pages.showNext}">
+                            <a th:href="@{'/profile/'+${section}(page=${pages.page+1})}" aria-label="Previous">
+                                <span aria-hidden="true">&gt;</span>
+                            </a>
+                        </li>
+                        <li th:if="${pages.showEndPage}">
+                            <a th:href="@{'/profile/'+${section}(page=${pages.totalPage})}" aria-label="Previous">
+                                <span aria-hidden="true">&gt;&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--            分页导航结束-->
+            </div>
+        </div>
+
+        <!--            右侧-->
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  marto-size">
+                <div class="list-group section">
+                    <a th:href="@{/profile/pawn}"
+                       th:class="${section=='pawn'}?'active list-group-item' : 'list-group-item'">我的问题</a>
+                    <a th:href="@{/profile/replies}"
+                       th:class="${section=='replies'}?'active list-group-item' : 'list-group-item'">最新回复
+                        <span class="badge" th:text="${session.ToBeViewed}"
+                              style="background-color: #009A61;color: #FFFFFF"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

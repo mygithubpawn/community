@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--/按结果嵌套查询 index-->
+<mapper namespace="com.pawn.community.mapper.CommentMapper">
+    <!--回复评论-->
+    <select id="SelectCreate" resultMap="CommentById" parameterType="map">
+     SELECT
+      comment.id cid,
+      comment.parent_id cparentId,
+      comment.type ctype,
+      comment.commentator ccommentator,
+      comment.gmt_create cgmtCreate,
+      comment.gmt_modified cgmtModified,
+      comment.like_count clikeCount,
+      comment.content ccontent,
+      user.id Userid,
+      user.name Username,
+      user.name Username,
+      user.gmt_create UsergmtCreate,
+      user.gmt_modified UsergmtModified,
+      user.avatar_url UseravatarUrl
+     FROM comment
+     LEFT JOIN `user` ON comment.type= `user`.id
+     LEFT JOIN article ON comment.id= `article`.id
+     WHERE comment.parent_id=#{articleId}
+    ORDER BY comment.gmt_modified DESC
+</select>
+    <resultMap id="CommentById" type="CommentDTO">
+        <result property="id" column="cid"/>
+        <result property="parentId" column="cparentId"/>
+        <result property="type" column="ctype"/>
+        <result property="commentator" column="ccommentator"/>
+        <result property="gmtCreate" column="cgmtCreate"/>
+        <result property="gmtModified" column="cgmtModified"/>
+        <result property="likeCount" column="clikeCount"/>
+        <result property="content" column="ccontent"/>
+        <association property="user" javaType="User">
+            <result property="id" column="Userid"/>
+            <result property="name" column="Username"/>
+            <result property="gmtCreate" column="UsergmtCreate"/>
+            <result property="gmtModified" column="UsergmtModified"/>
+            <result property="avatarUrl" column="UseravatarUrl"/>
+        </association>
+    </resultMap>
+</mapper>

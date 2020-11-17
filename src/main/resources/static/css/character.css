@@ -1,0 +1,63 @@
+/* 清楚元素默认的边框距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* 让所有斜体不倾斜 */
+em,
+i {
+    font-style: normal;
+}
+
+/* 去掉列表前面的小点 */
+li {
+    list-style: none;
+}
+
+/* 去掉图片的底侧的空白间隙 */
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/* 让button按钮变成小手 */
+button {
+    cursor: pointer;
+}
+
+span {
+    font－family: 宋体;
+}
+
+/* 取消超链接的下划线 */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input {
+    /* 取消轮廓线 */
+    outline: none;
+}
+
+button {
+    outline: none;
+}
+
+/* 清除浮动 */
+.clearfix {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}

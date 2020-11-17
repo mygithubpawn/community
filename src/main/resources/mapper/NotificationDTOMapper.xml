@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--按当前用户嵌套查询 最新评论-->
+<mapper namespace="com.pawn.community.mapper.NotificationMapper">
+
+    <select id="replyToReminder" resultMap="replyUserID" parameterType="map">
+    SELECT
+    notification.notifier nnotifier,
+    notification.type ntype,
+     notification.status nstatus,
+     notification.gmt_create NgmtCreate,
+     article.title atitle,
+      article.creator acreator,
+     article.id aid,
+    comment.content ccontent,
+     `user`.id uid,
+     `user`.name uname
+     FROM article
+     LEFT JOIN COMMENT ON article.id=comment.parent_id
+     LEFT JOIN `user` ON article.creator=`user`.id
+     LEFT JOIN notification ON notification.id=comment.id
+     WHERE   comment.content IS NOT NULL
+     AND `user`.id=#{userId}
+    ORDER BY notification.gmt_create DESC
+     Limit #{page},#{size}
+    </select>
+    <resultMap id="replyUserID" type="NotificationDTO">
+        <result property="notifier" column="ntype"/>
+        <result property="type" column="nnotifier"/>
+        <result property="status" column="nstatus"/>
+        <result property="gmtCreate" column="NgmtCreate"/>
+        <result property="title" column="atitle"/>
+        <result property="creator" column="acreator"/>
+        <result property="id" column="aid"/>
+        <result property="content" column="ccontent"/>
+        <result property="userId" column="uid"/>
+        <result property="userName" column="uname"/>
+    </resultMap>
+</mapper>

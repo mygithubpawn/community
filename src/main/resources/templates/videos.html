@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="referrer" content="no-referrer"/>
+    <title>视频教程</title>
+</head>
+</head>
+<body>
+<!--导入相关依赖-->
+<div th:insert="~{publicigation/public:: PublicDependence-01}"></div>
+<!--顶部开始-->
+<div th:insert="~{publicigation/navigation :: nav}"></div>
+<!--主体-->
+<div class="container-fluid main">
+    <div class="row w">
+
+        <div class="col-xs-6 col-md-2 video" th:each="relatedVideos:${relatedVideos}">
+            <div class="BorderStyle">
+                <a th:href="@{/video(page=${relatedVideos.page},aid=${relatedVideos.aid})}" class="thumbnail">
+                    <img th:src="${relatedVideos.url}">
+                </a>
+                <div class="InnerMargin">
+                    <p><a class="hideText" th:href="@{/video(page=${relatedVideos.page},aid=${relatedVideos.aid})}"
+                          th:text="${relatedVideos.heading}"></a></p>
+                    <p class="upTheLord">
+                        <i class="fa fa-calendar-o" aria-hidden="true" title="发布的时间"></i>
+                        <span th:text="${#dates.format(relatedVideos.gmtCreate,'yyyy-MM-dd')}"></span>
+                        </br>
+                        <i class="fa fa-address-book" aria-hidden="true" title="up主"></i>
+                        <a th:href="${relatedVideos.address}" th:text="${relatedVideos.name}"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+

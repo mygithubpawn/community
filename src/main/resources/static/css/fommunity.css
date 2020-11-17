@@ -1,0 +1,390 @@
+body {
+    background-color: rgba(255, 255, 255, 0.77);
+}
+
+.w {
+    width: 1400px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.88);
+}
+
+.main {
+    margin: 30px;
+}
+
+.btn-publish {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.media-object {
+    width: 38px;
+    height: 38px;
+}
+
+.comment {
+    margin: 10px 0;
+}
+
+.media-body {
+    padding-top: 10px;
+}
+
+.btn-comment {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.text-desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+
+.publish-tag-tab {
+    /*display: none;*/
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.profile.section {
+    margin-top: 15px;
+}
+
+.size-coler {
+    color: rgba(102, 102, 102, 0.77);
+}
+
+.community-menu {
+    color: #009A61;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.bianji-h {
+    color: #00965E;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.comment-sp {
+    padding-left: 10px;
+    padding-right: 6px;
+}
+
+.question-tag {
+    background-color: #E5F4EF;
+    margin-right: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #00965E;
+    transition: all 0.2s ease;
+}
+
+.navigation-top {
+    margin: 5px 5px 0 5px;
+    background-color: #EBF7F3;
+    color: #00965E;
+
+}
+
+.index-tag {
+    margin: 10px 0 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu {
+    color: #999;
+    margin-top: 5px;
+}
+
+.question-related {
+    line-height: 22px;
+    font-size: 13px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+
+}
+
+.question-wechat {
+    width: 80%;
+}
+
+.menu .icon {
+    margin-right: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu .active {
+    color: #499ef3;
+}
+
+.label-size {
+    font-size: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin: 8px 5px;
+    white-space: normal;
+    display: inline-block;
+    background-color: #009688;
+    transition: all 0.2s ease;
+}
+
+.label-size:hover {
+    background-color: #00965E;;
+}
+
+.comments {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(218, 218, 218, 0.34);
+}
+
+.menu .icon:hover {
+    color: #499ef3;
+}
+
+.question-title {
+    background-color: #FFFFFF;
+    border-left: 25px solid #E9ECEF;
+}
+
+.question-title-h1 {
+    font-weight: bolder;
+    margin-bottom: 15px;
+    margin-left: 12px;
+}
+
+.sub-comments {
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sub-comments .btn {
+    margin: 10px 0;
+
+}
+
+.video {
+    padding: 30px 10px 30px 10px;
+}
+
+.BorderStyle {
+    border: 1px solid #00d95a;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.97);
+}
+
+.video img {
+    height: 100%;
+    width: 100%;
+}
+
+.hideText {
+    color: #888888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.upTheLord {
+    font-size: 10px;
+    font-weight: bolder;
+    color: #DACAC1;
+}
+
+.fieldset-size {
+    height: 30px;
+    line-height: 10px;
+    transition: all 0.4s ease;
+    border-radius: 4px 4px 4px 4px;
+    /*变小手*/
+    cursor: pointer;
+}
+
+.width-slh {
+    width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; /*将对象作为弹性伸缩盒子模型显示。*/
+    -webkit-line-clamp: 3; /*设置需要显示的行数*/
+    -webkit-box-orient: vertical; /*设置伸缩盒子的子元素排列方式(从上到下垂直排列)*/
+}
+
+.bain-1 {
+    width: 700px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; /*将对象作为弹性伸缩盒子模型显示。*/
+    -webkit-line-clamp: 1; /*设置需要显示的行数*/
+    -webkit-box-orient: vertical; /*设置伸缩盒子的子元素排列方式(从上到下垂直排列)*/
+}
+
+.bain-2 {
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; /*将对象作为弹性伸缩盒子模型显示。*/
+    -webkit-line-clamp: 1; /*设置需要显示的行数*/
+    -webkit-box-orient: vertical; /*设置伸缩盒子的子元素排列方式(从上到下垂直排列)*/
+    margin-bottom: 10px;
+}
+
+.fieldset-size:hover {
+    background-color: #EBF7F3;
+}
+
+.InnerMargin {
+    margin: 8px;
+}
+
+.xiangguanwz {
+
+    width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.fluid-bouutn {
+    width: 1200px;
+    height: 50px;
+    padding-top: 4px;
+}
+
+.item-top {
+    color: #999999;
+    padding-top: 12px;
+}
+
+.reclo {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 1px 1px rgba(217, 217, 217, 0.77);
+    border-top: 2px solid #00965E;
+    height: 50px
+}
+
+.reclo-nav {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 3px 0 rgba(217, 217, 217, 0.77);
+}
+
+.maiwn-tol {
+    margin-top: 40px;
+}
+
+.img-top {
+    width: 50px;
+}
+
+.tubiao-top {
+    margin: 15px 5px 10px 60px;
+}
+
+.tubiao-top a {
+    color: #08975F;
+    transition: all 0.2s ease;
+}
+
+.tubiao-top a:hover {
+    color: #004A2E;
+}
+
+.anliu-li-1 {
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    margin-left: -6px;
+    transition: all 0.2s ease;
+    border: 1px solid #00965E;
+    color: #00965E;
+}
+
+.anliu-li-1:hover {
+    background-color: #00965E;
+    color: #FFFFFF;
+}
+
+.anliu-li-1 i {
+    font-size: 18px;
+    margin-top: 14px;
+}
+
+.anliu-li {
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-right: 2px;
+    transition: all 0.2s ease;
+    color: #6C757D;
+}
+
+.marto-size {
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    /*调节圆周程度*/
+    /*border-radius: 10px;*/
+}
+
+.anliu-li:hover {
+    background-color: #6C757D;
+    color: #FFFFFF;
+}
+
+.a-biaoti {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #009A61;
+    font－family: 宋体;
+    transition: all 0.2s ease;
+    /*color: #7F5FC6;*/
+}
+
+.a-biaoti:hover {
+    color: #8E63C6;
+}
+
+.anliu-li i {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.biaoti-wen {
+    color: #8C5729;
+    transition: all 0.2s ease;
+
+}
+
+.huif-size {
+    font-weight: bolder;
+    font-size: 18px;
+    color: #009A61;
+    margin-right: 5px;
+    transition: all 0.2s ease;
+}
+
+.huif-size:hover,
+.biaoti-wen:hover {
+    color: #00965E;
+}

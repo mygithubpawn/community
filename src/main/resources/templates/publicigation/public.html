@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>公共依赖</title>
+</head>
+<body>
+<div th:fragment="PublicDependence-01">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--    layui-->
+    <link rel="stylesheet" th:href="@{/layui/dist/css/layui.css}"/>
+    <script th:src="@{/layui/dist/layui.js}" charset="utf-8"></script>
+    <script th:src="@{/layui/dist/layui.all.js}" charset="utf-8"></script>
+    <!--    图标库-->
+    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/style.css}">
+    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.min.css}" type="text/css">
+    <!--    本地样式-->
+    <link rel="stylesheet" th:href="@{/css/fommunity.css}">
+    <link rel="stylesheet" th:href="@{/css/NavFoot.css}">
+    <link rel="stylesheet" th:href="@{/css/character.css}">
+    <script th:src="@{/js/Layui.js}" charset="utf-8"></script>
+    <script th:src="@{/js/community.js}" charset="utf-8"></script>
+    <!--    樱花特效-->
+<!--    <script th:src="@{/js/editormd/CherryBlossoms.js}" charset="utf-8"></script>-->
+    <!--    雪花特效-->
+    <script th:src="@{/js/editormd/snowflake.js}" charset="utf-8"></script>
+</div>
+<div th:fragment="PublicDependence-02">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--    layui-->
+    <link rel="stylesheet" th:href="@{/layui/dist/css/layui.css}"/>
+    <script th:src="@{/layui/dist/layui.js}" charset="utf-8"></script>
+    <script th:src="@{/layui/dist/layui.all.js}" charset="utf-8"></script>
+    <!--    图标库-->
+    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/style.css}">
+    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.min.css}" type="text/css">
+    <!--    富文本编译器-->
+    <link rel="stylesheet" th:href="@{/editor/css/editormd.min.css}"/>
+    <script th:src="@{/editor/editormd.amd.js}"></script>
+    <script th:src="@{/editor/plugins/image-dialog/image-dialog.js}"></script>
+    <link rel="stylesheet" th:href="@{/static/editor/css/editormd.preview.min.css}">
+    <script th:src="@{/editor/lib/marked.min.js}" type="application/javascript"></script>
+    <script th:src="@{/editor/lib/prettify.min.js}" type="application/javascript"></script>
+
+    <!--    本地样式-->
+    <link rel="stylesheet" th:href="@{/css/fommunity.css}">
+    <link rel="stylesheet" th:href="@{/css/NavFoot.css}">
+    <link rel="stylesheet" th:href="@{/css/character.css}">
+    <script th:src="@{/js/Layui.js}" charset="utf-8"></script>
+    <script th:src="@{/js/community.js}" charset="utf-8"></script>
+</div>
+</body>
+</html>

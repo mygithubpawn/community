@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>发布中心</title>
+</head>
+<body style="background-color: #E9ECEF">
+<!--导入相关依赖-->
+<div th:insert="~{publicigation/public:: PublicDependence-02}"></div>
+<!--顶部开始-->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reclo">
+    <div class="container-fluid fluid-bouutn">
+        <ul class="layui-nav" style="text-align: center; margin: auto; background-color:#FFFFFF;">
+            <li class="layui-nav-item item-top" style="float: left;">
+                <a class="navbar-brand" th:href="@{/}" style="color: red">怡红院</a>
+            </li>
+            <li class="layui-nav-item item-top" style="font-weight: bolder;color: #6C757D">
+                <h2 style="font-weight: bold;font-size: 18px" th:text="${error!=null?error:'写文章'}"></h2>
+            </li>
+            <li class="layui-nav-item" style="float: right;">
+                <button class="layui-btn" style="float: right" onclick="tijiao();">
+                    发 布 文 章
+                    <i class="fa fa-location-arrow" style="margin-left: 2px" aria-hidden="true"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--    顶部结束-->
+<!--    编辑区开始-->
+<div class="container-fluid">
+    <div class="row" style="width: 1150px;margin: auto">
+        <div class="col-lg-12 coL-md-12 coL-sm-12 col-xs-12 maiwn-tol">
+            <form id="loginForm" action="/publish" method="post">
+                <input type="hidden" name="id" th:value="${id}"/>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="title" th:value="${title}" name="title"
+                           placeholder="文章标题...." style="height: 45px;" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="title">添加标签 :</label>
+                    <!--                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"-->
+                    <input type="text" class="form-control" name="tag" th:value="${tag}"
+                           placeholder="输入标签以，号隔开" required autocomplete="off" style="height: 45px;"
+                           id="tag"
+                           onclick="showSelectTAag()">
+                    <!--                    <input class="form-control" type="text" id="tag" name="tag" th:value="${tag}"-->
+                    <!--                           placeholder="选择对应的标签" readonly required-->
+                    <!--                           onclick="showSelectTAag()">-->
+                    <!--                    dropdown-menu  aria-labelledby="dLabel"-->
+                    <div id="select-tag" class="publish-tag-tab">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" th:each="selectCategory,selectCategoryStat:${tags}"
+                                th:class="${selectCategoryStat.first ? 'active':''}"><a
+                                    th:href="${'#'+selectCategory.categoryName}" aria-controls="home"
+                                    role="tab" data-toggle="tab"
+                                    th:text="${selectCategory.categoryName}"></a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" th:id="${selectCategory.categoryName}"
+                                 th:each="selectCategory:${tags}"
+                                 th:class="${selectCategoryStat.first ? 'active tab-pane':'tab-pane'}">
+                                <span>
+                                <span class="label label-info label-size" th:each="selectTag:${selectCategory.tags}">
+                                    <span class="gLyphicon glyphicon-taqs label-size" onclick="selectTag(this)"
+                                          th:data-tag="${selectTag}"
+                                          th:text="${''+selectTag}"></span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                编辑框-->
+                <div class=" form-group" id="question-editor">
+                    <textarea name="description" id="description" th:text="${description}" style="display:none;"
+                              class="form-control"
+                              cols="30"
+                              rows="10"></textarea>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        var editor = editormd("question-editor", {
+                            width: "100%",
+                            height: 800,
+                            delay: 0,
+                            watch: false,
+                            placeholder: "请输入正文~",
+                            imageUpload: true,
+                            imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                            imageUploadURL: "/file/upload",
+                            path: "/editor/lib/"
+                        });
+                    });
+                </script>
+            </form>
+            <script>
+                function tijiao() {
+                    $("#loginForm").submit();//或者jQuery方式,二选一，不过现在已经没啥项目不引入jQuery了吧。。。
+                }
+            </script>
+        </div>
+    </div>
+    <!--  编辑区结束-->
+
+</body>
+</html>

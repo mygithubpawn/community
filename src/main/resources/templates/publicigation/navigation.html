@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="nav">
+    <nav class="navbar navbar-default reclo-nav">
+        <div class="container-fluid w">
+
+            <div class="navbar-header" title="怡红院">
+                <a class="navbar-brand" th:href="@{/}">怡红院</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!--                广告-->
+                <ul class="nav navbar-nav">
+                    <script>
+                        function clickNav(label) {
+                            gtag('event', 'click', {
+                                'event_category': 'LiNK',
+                                'event_label': label,
+                                'transport_type': 'NAV'
+                            })
+                        }
+                    </script>
+                    <li>
+                        <button type="button" class="layui-btn layui-btn-primary navigation-top" title="首页"
+                                style="border: 0;font-weight: bolder">
+                            <a th:href="@{/}">
+                             </a>
+                        </button>
+                    </li>
+                    <li th:each="ads:${session.ads}">
+                        <a th:href="${ads.url}" th:text="${ads.title}" th:onclick="clickNav([[${ads.title}]])"></a>
+                    </li>
+                    <li>
+                        <a th:href="@{/videos}">视频教程</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/" method="get">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" placeholder="搜索话题">
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        <i class="fa fa-search" style="font-size: 17px;color:#00d95a;font-weight: lighter"
+                           aria-hidden="true"></i>
+                    </button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li th:if="${session.user !=null}">
+                        <button type="button" class="layui-btn navigation-top">
+                            <a th:href="@{/publish}" style="color:#00965E">发布</a>
+                        </button>
+
+                    </li>
+                    <li th:if="${session.user != null}">
+                        <button class="layui-btn navigation-top">
+                            <a th:href="@{/profile/replies}">
+                                <i class="layui-icon layui-icon-notice" style="color:#00965E"></i>
+                                <span class="layui-badge " style="background-color:#00965E " th:text="${session.ToBeViewed}"></span>
+                            </a>
+                        </button>
+                    </li>
+                    <li class="dropdown" th:if="${session.user != null}">
+                        <button style="color:#009A61;background-color: #EBF7F3" id="dLabel" type="button"
+                                class="layui-btn navigation-top" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            <span th:text="${session.user.getName()!=null?session.user.getName():'匿名用户'}"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="background-color: #F5F5F5;margin-top: 8px">
+                            <li><a th:href="@{/profile/pawn}">文章中心</a></li>
+                            <hr class="col-lg-8 col-md-12 col-sm-12 col-xs-12"  style="background-color: #95D1BA">
+                            <li>
+                                <a th:href="@{/profile/replies}">最新消息
+                                    <span class="badge" th:text="${session.ToBeViewed}"
+                                          style="background-color: #009A61;margin-left: 2px"></span>
+                                </a>
+                            </li>
+                            <hr class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="background-color: #95D1BA">
+                            <li><a th:href="@{/home}">个人质料</a></li>
+                            <hr class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="background-color: #95D1BA;">
+                            <li><a th:href="@{/logout}">退出</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li th:if="${session.user == null}">
+                        <button style="color:#FFFFFF;background-color: #EBF7F3" type="button"
+                                class="layui-btn navigation-top">
+
+                            <a href="https://github.com/login/oauth/authorize?client_id=Iv1.75c1e6b5781e0b66&state=STATE&
+                    redirect_uri=http://localhost:8012/callback&state=1" style="color:#8B5727">登陆
+                                <i class="fa fa-github" aria-hidden="true"></i></a>
+                        </button>
+                    </li>
+                    <li th:if="${session.user != null}">
+                        <a th:href="@{/home}">
+                            <img class="media-object img-circle navigation-top"
+                                 style="width: 38px;height: 38px;margin-top: -10px"
+                                 th:src="${session.user.getAvatarUrl()!=null?session.user.getAvatarUrl():'/images/defaultAvatar.png'}">
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</body>
+</html>

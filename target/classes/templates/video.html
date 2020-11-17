@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>视频详情</title>
+</head>
+<body>
+<!--导入相关依赖-->
+<div th:insert="~{publicigation/public:: PublicDependence-01}"></div>
+<!--顶部开始-->
+<div th:insert="~{publicigation/navigation :: nav}"></div>
+<div class="container-fluid main">
+    <div class="row w">
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <iframe th:src="@{//player.bilibili.com/player.html?(aid=${aid},page=${page})}"
+                            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+                            style="width: 100%;min-height:450px"></iframe>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="float: right">
+                    <div class="btn-group" th:if="${aid=='75233634'}">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" style="float: right">
+                            视频选集 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a th:href="@{/video(page=1,aid=${aid})}">p1 这个阶段如何学习</a></li>
+                            <li><a th:href="@{/video(page=2,aid=${aid})}">p2 什么是springboot</a></li>
+                            <li><a th:href="@{/video(page=3,aid=${aid})}">p3 什么是微服务架构</a></li>
+                            <li><a th:href="@{/video(page=3,aid=${aid})}">p4 第一个springboot程序</a></li>
+                            <li><a th:href="@{/video(page=3,aid=${aid})}">p5 idea创建及彩蛋</a></li>
+                            <li><a th:href="@{/video(page=3,aid=${aid})}">p6 springboot自动装配原理</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h4>视频笔记</h4>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h4>up主</h4>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

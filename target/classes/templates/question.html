@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:#E9ECEF;">
+<!--导入相关依赖-->
+<div th:insert="~{publicigation/public:: PublicDependence-02}"></div>
+<!--顶部开始-->
+<div th:insert="~{publicigation/navigation :: nav}"></div>
+<!--顶部结束-->
+<div class="container-fluid main profile">
+    <div class="row w" style="border-radius: 6px;background-color:#E9ECEF;">
+        <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12"
+             style="padding: 6px;  background-color:#E9ECEF;margin-top: 100px">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul style="float: right">
+                    <li class="anliu-li-1">
+                        <i class="layui-icon layui-icon-praise"></i>
+                    </li>
+                    <li class="anliu-li">
+                        <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </li>
+                    <li class="anliu-li">
+                        <i class="layui-icon  layui-icon-dialogue"></i>
+                    </li>
+                    <li class="anliu-li">
+                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="background-color: #FFFFFF;">
+            <!--正文-->
+            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12" style="background-color: #FFFFFF;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 20px;background-color:#FFFFFF;">
+                    <div class="media" style=" background-color:#FFFFFF;">
+                        <div class="img-top" style="float: left" title="阁主🧑">
+                            <a href="#">
+                                <img class="img-circle" style="width: 100%;height: 100%;"
+                                     th:src="${ArticleDetails.avatarUrl!=null?ArticleDetails.avatarUrl:'/images/defaultAvatar.png'}">
+                            </a>
+                        </div>
+                        <div class="tubiao-top">
+                            <a href="#">
+                                <strong th:text="${ArticleDetails.name!=null?ArticleDetails.name:'匿名用户'}"
+                                        style="font-size: 18px;font-weight: bolder"></strong>
+                            </a>
+                            <i class="fa fa-cloud-upload" aria-hidden="true" style="color:#FFC107;margin-left: 5px"></i>
+                            <i class="fa fa-diamond" aria-hidden="true" style="color:#BF7158;margin-left: 5px">2k</i>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="question-title-h1">
+                    <span th:text="${ArticleDetails.title}"></span>
+                </h1>
+
+                <span class="text-desc" style="margin-left: 12px;">
+           <span class="glyphicon glyphicon-user"title="关注" style="color: darkviolet;margin-left: 4px"></span>
+          <span th:text="${ArticleDetails.commentCount}"></span>
+                    <i class="fa fa-eye" aria-hidden="true" title="浏览" style="margin-left: 4px;color: #FFC107"></i>
+            <span th:text="${ArticleDetails.viewCount}"></span>
+                <span class="glyphicon glyphicon-thumbs-up" title="点赞"
+                      style="color: #009A61;margin-left: 4px;"></span>
+                <span th:text="${ArticleDetails.likeCount}"></span>
+                       <i class="fa fa-commenting-o" aria-hidden="true" title="回复"
+                          style="color: #009A61;margin-left: 4px;"></i>
+                    <span th:text="${ArticleDetails.replyCount}"></span>
+                    <i class="fa fa-calendar" aria-hidden="true"style="margin-left: 4px;color: #C07C76"></i>
+                     <span th:text="${#dates.format(ArticleDetails.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 bianji-h" style="float: right">
+                    <h5 class="bianji-h" th:if="${session.user !=null}">
+                        <a class="bianji-h" th:href="@{'/publish/'+${ArticleDetails.id}}"
+                           th:if="${session.user.id !=null && session.user.id==ArticleDetails.creator}"
+                           style="color: #999">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true'"></span>
+                            编辑
+                        </a>
+                    </h5>
+                </div>
+                </span>
+                <!--                标签-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
+                    <span class="label  question-tag" th:each="tag:${ArticleDetails.tag.split(',')}">
+                   <i class="fa fa-tag" aria-hidden="true"></i>
+                    <span class="label" style="background-color:#E5F4EF;color: #00965E; " th:text="${tag}"></span>
+                    </span>
+                </div>
+                <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                    style="margin: 18px 0 45px 0;background-color: rgba(219,219,219,0.2)">
+
+                <!--                类容展示-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="question-view">
+                    <textarea style="display:none;" th:text="${ArticleDetails.description}"></textarea>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        editormd.markdownToHTML("question-view", {});
+                    });
+                </script>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                     style="background-color:#00965E ;height: 2px; margin: 20px 0 40px 0">
+
+                </div>
+            </div>
+            <!--回复-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 style="margin-bottom: 20px">
+                    <button type="button" class="layui-btn layui-btn-primary">
+                        评论： <span th:text="${ArticleDetails.getReplyCount()}"></span>
+                    </button>
+                </h4>
+
+                <!--评论-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 comments"
+                     th:each="commentCreateDTOS :${commentCreateDTOS}">
+                    <div class="media">
+                        <div class="media-left">
+                            <a th:href="@{/home}">
+                                <img class="media-object img-circle" style="width: 38px" height="38px"
+                                     th:src="${commentCreateDTOS.user.avatarUrl}">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading" style="color: #00965E;margin-bottom: 10px;font-size: 18px;font-weight: bold">
+                                <span th:text="${commentCreateDTOS.user.name}"></span>
+                            </h5>
+                            <!--                        回复类容-->
+                            <div style="margin-bottom: 10px;font－family: 宋体;" th:text="${commentCreateDTOS.content}"></div>
+                            <div class="menu" style="color:#888888">
+                                <span class="glyphicon glyphicon-thumbs-up icon" title="给他点赞👍"></span>
+                                <span class="glyphicon glyphicon-comment icon" th:data-id="${commentCreateDTOS.id}"
+                                      onclick="collapseComments(this)"></span>
+                                <span class="pull-right"
+                                      th:text="${#dates.format(ArticleDetails.getGmtCreate(),'yyyy-MM-dd HH:mm')}">
+                            </span>
+                            </div>
+                            <!--                            二级评论-->
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse sub-comments"
+                                 th:id="${'comment-'+commentCreateDTOS.id}">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                     th:each="secomments :${secomments}">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-rounded" style="width: 38px" height="38px"
+                                                     th:src="${session.user!=null?session.user.avatarUrl:'/images/defaultAvatar.png'}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <span th:text="${session.user!=null?session.user.name:'匿名用户'}"></span>
+                                            </h5>
+                                            <!--                        回复类容-->
+                                            <div th:text="${secomments.capacity}"></div>
+                                            <div class="menu">
+                                                <span class="pull-right"
+                                                      th:text="${#dates.format(ArticleDetails.getGmtCreate(),'yyyy-MM-dd HH:mm')}">
+                                                  </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="text" class="form-control" placeholder="评论一下~~"
+                                           th:id="${'input-'+commentCreateDTOS.id}">
+                                    <button type="button" class="btn btn-success pull-right" onclick="comment(this)"
+                                            th:data-id="${commentCreateDTOS.id}">评论
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            回复框-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="comment_section">
+                <div class="media">
+                    <div class="media-left" style="float: left">
+                        <a href="#">
+                            <img class="media-object img-rounded" style="width: 38px" height="38px"
+                                 th:src="${session.user!=null?session.user.avatarUrl:'/images/defaultAvatar.png'}">
+                        </a>
+                    </div>
+                    <div style="float: left;width: 92%;margin-top: 4px">
+                        <input type="hidden" id="question_id" th:value="${ArticleDetails.id}"/>
+                        <input type="text" class="form-control" placeholder="评论一下~~" rows="6" id="comment_content"
+                               required style="margin-bottom: 5px">
+                        <button type="button" class="btn btn-success btn-comment" onclick="post()"> 回复</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title">
+            <!--            二维码-->
+            <div style="padding: 20px">
+                <h4 style="padding-bottom: 10px">怡红院源码仓库地址</h4>
+                <a href="https://gitee.com/jade_purple">
+                    <img class="img-thumbnail question-wechat" src="/images/QRcode.jpg">
+                </a>
+                <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#95D1BA ">
+                <!--            相关问题-->
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+                    <legend>相关问题</legend>
+                    <div class="layui-field-box fieldset-size xiangguanwz" th:each="articles:${articles}">
+                        <i class="fa fa-external-link comment-sp"style="color: #00965E" aria-hidden="true"></i>
+                        <a th:href="@{'/question/'+${articles.id}}" th:text="${articles.title}"></a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+    <contextName>logback</contextName>
+
+    <springProperty scope="context" name="appName" source="management.metrics.tags.appName"
+                    defaultValue="appName"/>
+    <!--定义日志文件的存储地址-->
+<!--    <property name="log.path" value="/var/nrsc"/>-->
+
+    <!--设置控制台日志输出格式-->
+    <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] ${appName} %-5level %logger:%L - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--设置info日志的输出-->
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!--日志的级别设为ERROR-->
+            <level>ERROR</level>
+            <!--如果是出现了ERROR直接拒绝不管，走下面的日志处理即：fileErrorLog-->
+            <onMatch>DENY</onMatch>
+            <!--否则的话，会走此日志输出，按照日志级别来说ERROR下面还有WARN,INFO,DEBUG和TRACE，
+            但是我们在最下面设置了默认日志级别为INFO，因此在该文件里只会输出INFO和WARN日志-->
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/%d{yyyy, aux}/%d{MM, aux}/%d{dd, aux}/info/info.%d{yyyy-MM-dd-HH}.log.gz
+            </fileNamePattern>
+            <maxHistory>2160</maxHistory> <!-- 90 day, 24 hours -->
+            <totalSizeCap>70GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] ${appName} %-5level %logger %L - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--设置error日志-->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <!--注意：error日志的过滤类用ThresholdFilter-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/%d{yyyy, aux}/%d{MM, aux}/%d{dd, aux}/error/error.%d{yyyy-MM-dd-HH}.log.gz
+            </fileNamePattern>
+            <!--日志文件保留天数-->
+            <maxHistory>2160</maxHistory> <!-- 90 day, 24 hours -->
+            <!--最大不能超过30GB -->
+            <totalSizeCap>30GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <!--日志输出格式-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] ${appName} %-5level %logger %L - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--将上面的配置应用于整个项目，且默认日志级别设置为INFO-->
+    <root level="INFO">
+        <appender-ref ref="consoleLog"/>
+        <appender-ref ref="fileInfoLog"/>
+        <appender-ref ref="fileErrorLog"/>
+    </root>
+</configuration>
