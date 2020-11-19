@@ -3,131 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <title>family</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
-<body style="background-color: #E9ECEF">
+<body style="background-color:#030303; ">
 <!--导入相关依赖-->
 <div th:insert="~{publicigation/public:: PublicDependence-01}"></div>
+<!--<div th:insert="~{publicigation/background:: Background-02}"></div>-->
 <!--顶部开始-->
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reclo">
-    <div class="container-fluid fluid-bouutn">
-        <ul class="layui-nav" style="text-align: center; margin: auto; background-color:#FFFFFF;">
-            <li class="layui-nav-item item-top" style="float: left;">
-                <a class="navbar-brand" th:href="@{/}" style="color: red">怡红院</a>
+<!--    <dvi>-->
+<!--        <img th:src="@{/imgages/img/20200413.jpg}" style="width: 100%">-->
+<!--    </dvi>-->
+
+<div style="height: 360px;margin-top: 10px">
+    <div th:insert="~{publicigation/background:: Background-01}"></div>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="container-fluid fluid-bouutn" style="background-color:transparent">
+        <ul class="layui-nav" style="text-align: center; margin: auto; background-color:transparent;">
+            <li class="layui-nav-item" style="float: left;">
+                <button type="button" class="layui-btn layui-btn-primary" title="首页"
+                        style="border: 0;font-weight: bolder;background-color: transparent;margin-bottom: 20px">
+                    <a th:href="@{/}">
+                        <i class="layui-icon layui-icon-home" style="font-size: 26px;color: #00965E"></i>
+                    </a>
+                </button>
             </li>
             <li class="layui-nav-item item-top" style="font-weight: bolder;color: #6C757D">
-                <h2 style="font-weight: bold;font-size: 18px">家</h2>
+                <h2 style="font-weight: bold;font-size: 18px;color: #00965E">家</h2>
             </li>
-            <li class="layui-nav-item" style="float: right;" th:if="${session.user != null}">
+            <li class="layui-nav-item item-top" style="float: right;font-weight: bolder;color: #6C757D"
+                th:if="${session.user != null}">
                 <a th:href="@{/home}">
-                    <img class="media-object img-circle navigation-top"
-                         style="width: 38px;height: 38px;margin-top: -10px"
-                         th:src="${session.user.getAvatarUrl()!=null?session.user.getAvatarUrl():'/images/defaultAvatar.png'}">
+                    <h2 style="font-weight: bold;font-size: 18px;color: #00965E" th:text="${session.user.name}"></h2>
                 </a>
             </li>
         </ul>
     </div>
 </div>
-<!--顶部结束-->
-<div class="container-fluid main profile">
-    <div class="row w" style="border-radius: 6px;background-color:#E9ECEF;">
-        <!--        左侧-->
-        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title" style="border-right: 20px solid #E9ECEF">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marto-size">
-                <ul>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                </ul>
-            </div>
-        </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: -20px">
 
-        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="background-color: #FFFFFF;">
-            <!--正文-->
-            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 marto-size">
-                <ul class="layui-timeline">
-                    <li class="layui-timeline-item">
-                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                        <div class="layui-timeline-content layui-text">
-                            <h3 class="layui-timeline-title">8月18日</h3>
-                            <p class="width-slh">
-                                layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。 layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。
-                                <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
+
+    <!--顶部结束-->
+    <div class="container-fluid main profile" style="background-color: transparent;">
+        <div class="row w" style="border-radius: 6px;background-color:transparent;">
+            <!--        左侧-->
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title"
+                 style="border-right: 20px solid  #EBF7F3; ">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler" style="margin-top: 12px">
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-address-card-o comment-sp" aria-hidden="true"></i>
+                        我的订阅
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="layui-icon layui-icon-praise comment-sp"></i>
+                        近期热门
+                    </div>
+                    <div class="layui-field-box fieldset-size">
+                        <i class="fa fa-globe comment-sp" aria-hidden="true"></i>
+                        最新类容
+                    </div>
+                    <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+                        <legend>后端技术</legend>
+                        <div class="layui-field-box fieldset-size">
+                            <a style="color:#00965E;">
+                                <i class="fa fa-language comment-sp" title="后端语言" style="color: #825DC5"
+                                   aria-hidden="true"></i>
+                                Java
+                            </a>
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <a style="color:#00965E;">
+                                <i class="fa fa-database comment-sp" style="color: #0052CC" aria-hidden="true"></i>
+                                Mysql
+                            </a>
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <a style="color:#00965E;">
+                                <i class="fa fa-codepen comment-sp" style="color: #2049F4" aria-hidden="true"></i>
+                                Springboot
+                            </a>
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <a style="color:#00965E;">
+                                <i class="fa fa-codepen  comment-sp" style="color: #FFC107" aria-hidden="true"></i>
+                                Mybatis
+                            </a>
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <a style="color:#00965E;">
+                                <i class="fa fa-codepen  comment-sp" style="color: #FFC107" aria-hidden="true"></i>
+                                thymeleaf
+                            </a>
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <a style="color:#00965E;">
+                                <i class="fa fa-codepen  comment-sp" style="color: #FFC107" aria-hidden="true"></i>
+                                thymeleaf
+                            </a>
+                        </div>
+                    </fieldset>
+                    <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+                        <legend>前端技术</legend>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-html5 comment-sp" style="color: #F8E71B" aria-hidden="true"></i>
+                            html
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-database comment-sp" style="color: #0052CC" aria-hidden="true"></i>
+                            css
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-weixin comment-sp" style="color: #2BA346" aria-hidden="true"></i>
+                            javaScript
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-apple comment-sp" aria-hidden="true"></i>
+                            Bootstrap
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-android comment-sp" style="color: #76C451" aria-hidden="true"></i>
+                            Layui
+                        </div>
+                    </fieldset>
+                    <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+                        <legend>构建工具</legend>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-cloud comment-sp" style="color: #2049F4" aria-hidden="true"></i>
+                            IDEA
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-codiepie comment-sp" style="color: #FFC107" aria-hidden="true"></i>
+                            SQL yog
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class=" layui-icon layui-icon-auz comment-sp" style="color: #3FA143"></i>
+                            HBuilderX
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-superpowers comment-sp" style="color: #1B7ED9" aria-hidden="true"></i>
+                            Maven
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-sitemap comment-sp" style="color: #2096F1" aria-hidden="true"></i>
+                            Git
+                        </div>
+                        <div class="layui-field-box fieldset-size">
+                            <i class="fa fa-github comment-sp" style="color: #77C684" aria-hidden="true"></i>
+                            github
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <script>
+                layui.use('element', function () {
+                    var element = layui.element;
+
+                });
+            </script>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="background-color: #FFFFFF;">
+                <!--正文-->
+                <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 marto-size" style="background-color: #FFFFFF;">
+                    <ul class="layui-timeline">
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">2020-10月20日</h3>
+                                <p class="width-slh">
+                                    当尝试过几款流行的静态博客框架后，开始了自己搭建博客的想法，回顾所学，已能为其所用~
+                                <ul>
+                                    <li>开始构思项目所需技术和知识点</li>
+                                    <li>开始后顾复习所需技术点</li>
+                                </ul>
                                 <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
-                            </p>
-                        </div>
-                    </li>
-                    <li class="layui-timeline-item">
-                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                        <div class="layui-timeline-content layui-text">
-                            <h3 class="layui-timeline-title">8月16日</h3>
-                            <p>杜甫的思想核心是儒家的仁政思想，他有“<em>致君尧舜上，再使风俗淳</em>”的宏伟抱负。个人最爱的名篇有：</p>
-                            <ul>
-                                <li>《登高》</li>
-                                <li>《茅屋为秋风所破歌》</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="layui-timeline-item">
-                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                        <div class="layui-timeline-content layui-text">
-                            <h3 class="layui-timeline-title">8月15日</h3>
-                            <p>
-                                中国人民抗日战争胜利72周年
-                                <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代
-                                <br>铭记、感恩
-                                <br>所有为中华民族浴血奋战的英雄将士
-                                <br>永垂不朽
-                            </p>
-                        </div>
-                    </li>
-                    <li class="layui-timeline-item">
-                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                        <div class="layui-timeline-content layui-text">
-                            <div class="layui-timeline-title">过去</div>
-                        </div>
-                    </li>
-                </ul>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">10月28日</h3>
+                                <p class="width-slh">
+                                    项目开始初期，有了足够的知识储备，开始了项目的基石搭建
+                                </p>
+                                <ul>
+                                    <li>开始构思项目模块</li>
+                                    <li>绘制项目图纸（UML）</li>
+                                    <li>搭建项目环境</li>
+                                    <li>设计数据库</li>
+                                </ul>
+                                <br>测试项目环境！并命名为怡红院1.0
+                                <!--                                <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>-->
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">10月29日</h3>
+                                <p class="width-slh">
+                                    怡红院 1.0 的一切准备工作似乎都已到位。发布之弦，一触即发~
+                                </p>
+                                <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
+                                <br>开始了第项目的一行代码☯
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月4日</h3>
+                                <p>完善了github登陆，并搭建出首页的雏形,及导航栏；
+                                </p>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月7日</h3>
+                                <p>
+                                    文章发布与展示完成，完成分页，文章发布使用json格式传递
+                                </p>
+                                <ul>
+                                    <li>数据库文章表与文章属性表进行连表操作</li>
+                                    <li>保证多用户同时操作单表的一致性（事务隔离级别）</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月9日</h3>
+                                <p>
+                                    完善文章详情页，添加回复功能（二级回复待修复）
+                                </p>
+                                <ul>
+                                    <li>数据库文章表与文章属性表进行连表操作</li>
+                                    <li>保证多用户同时操作单表的一致性（事务隔离级别）</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月12日</h3>
+                                <p>
+                                    完善项目的基本功能，并添加 Editor.md富文本编辑器，并添加事务
+                                </p>
+                                <ul>
+                                    <li>项目功能的基本测试，bug的修复，</li>
+                                    <li>富文本编辑器的选择</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月14日</h3>
+                                <p>
+                                    增加相关类容推荐，增加热门标签推荐，
+                                </p>
+                                <ul>
+                                    <li>项目功能的基本测试，bug的修复，</li>
+                                    <li>富文本编辑器的选择</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月14日</h3>
+                                <p>
+                                    增加广告为（流量变现，待修复），增加视频教程（完善所有功能）
+                                </p>
+                                <ul>
+                                    <li>注册谷歌广告对接账户，并设计相关数据表</li>
+                                    <li>内嵌BiliBili相关视频</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月17日</h3>
+                                <p>
+                                    美化项目前台，引入前端UI组件,实现快速开发
+                                </p>
+                                <ul>
+                                    <li>引入jquery , Bootstrap , Layui 组件库</li>
+                                    <li>引入font-awesome 图标库</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月18日</h3>
+                                <p>
+                                    第一次项目提交,项目上线
+                                </p>
+                                <ul>
+                                    <li>创建github远程仓库</li>
+                                    <li>提交代码</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">11月20日</h3>
+                                <p>
+                                    第二次项目提交,编写项目文档,导入数据库到项目
+                                </p>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title">怡红院2.0遥遥无期</div>
+                            </div>
+                        </li>
+                    </ul>
 
+                </div>
             </div>
-        </div>
-        <!--        右侧-->
-        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  marto-size">
-                <ul>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                    <li>vh</li>
-                </ul>
+            <!--        右侧-->
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title" style="border-left: 20px solid #EBF7F3;">
+                <div style="padding: 20px">
+                    <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold">怡红院源码仓库地址</h4>
+                    <a href="https://github.com/mygithubpawn/-" target="_blank" title="怡红院源码github仓库地址">
+                        <img class="img-thumbnail question-wechat" th:src="@{/images/img/QRcode.jpg}">
+                    </a>
+                    <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold;margin-top: 20px">怡红院源码仓库地址</h4>
+                    <a href="https://github.com/mygithubpawn/-" target="_blank" title="怡红院源码github仓库地址">
+                        <img class="img-thumbnail question-wechat" th:src="@{/images/img/timg.jpg}">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 </body>
 </html>

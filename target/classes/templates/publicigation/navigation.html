@@ -6,26 +6,30 @@
         <div class="container-fluid w">
 
             <div class="navbar-header" title="怡红院">
-                <a class="navbar-brand" th:href="@{/}">怡红院</a>
+                <a class="navbar-brand" th:href="@{/}">
+                    <i>怡红院
+                    </i>
+                </a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <!--                广告-->
                 <ul class="nav navbar-nav">
-                    <script>
-                        function clickNav(label) {
-                            gtag('event', 'click', {
-                                'event_category': 'LiNK',
-                                'event_label': label,
-                                'transport_type': 'NAV'
-                            })
-                        }
-                    </script>
-                    <li>
+                        <script>
+                            function clickNav(label) {
+                                gtag('event', 'click', {
+                                    'event_category': 'LiNK',
+                                    'event_label': label,
+                                    'transport_type': 'NAV'
+                                })
+                            }
+                        </script>
+                        <li>
                         <button type="button" class="layui-btn layui-btn-primary navigation-top" title="首页"
                                 style="border: 0;font-weight: bolder">
                             <a th:href="@{/}">
-                             </a>
+                                <i class="layui-icon layui-icon-home" style="font-size: 26px;color: #00965E"></i>
+                            </a>
                         </button>
                     </li>
                     <li th:each="ads:${session.ads}">
@@ -102,6 +106,104 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+</div>
+<div th:fragment="sidebar">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+        <div class="layui-field-box fieldset-size">
+            <i class="fa fa-address-card-o comment-sp" aria-hidden="true"></i>
+            我的订阅
+        </div>
+        <div class="layui-field-box fieldset-size">
+            <i class="layui-icon layui-icon-praise comment-sp"></i>
+            近期热门
+        </div>
+        <div class="layui-field-box fieldset-size">
+            <i class="fa fa-globe comment-sp" aria-hidden="true"></i>
+            最新类容
+        </div>
+        <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+            <legend>技术频道</legend>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-first-order comment-sp" style="color: #825DC5" aria-hidden="true"></i>
+                人工智能
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-sliders comment-sp" style="color: #009BBF" aria-hidden="true"></i>
+                Arm大计算
+            </div>
+        </fieldset>
+        <fieldset class=" layui-field-title col-lg-12 col-md-12 col-sm-12 col-xs-12 size-coler">
+            <legend>技术社区</legend>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-html5 comment-sp" style="color: #F8E71B" aria-hidden="true"></i>
+                前端
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-database comment-sp" style="color: #0052CC" aria-hidden="true"></i>
+                后端
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-weixin comment-sp" style="color: #2BA346" aria-hidden="true"></i>
+                小程序
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-apple comment-sp" aria-hidden="true"></i>
+                ios
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-android comment-sp" style="color: #76C451" aria-hidden="true"></i>
+                Android
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-github-alt comment-sp" style="color: #1E94FD" aria-hidden="true"></i>
+                AI
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-cloud comment-sp" style="color: #2049F4" aria-hidden="true"></i>
+                云计算
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-codiepie comment-sp" style="color: #FFC107" aria-hidden="true"></i>
+                游戏
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class=" layui-icon layui-icon-auz comment-sp" style="color: #3FA143"></i>
+                安全
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-superpowers comment-sp" style="color: #1B7ED9" aria-hidden="true"></i>
+                金融科技
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-sitemap comment-sp" style="color: #2096F1" aria-hidden="true"></i>
+                区块链
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-github comment-sp" style="color: #77C684" aria-hidden="true"></i>
+                开源
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="layui-icon layui-icon-util comment-sp" style="color: #4B91E4"></i>
+                工具
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-user-circle comment-sp" style="color: #8B572B" aria-hidden="true"></i>
+                程序员
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-industry comment-sp" style="color: #F5A623;" aria-hidden="true"></i>
+                行业
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="layui-icon layui-icon-template comment-sp" style="color: #009A61"></i>
+                SF官方
+            </div>
+            <div class="layui-field-box fieldset-size">
+                <i class="fa fa-tags comment-sp" aria-hidden="true"></i>
+                更多标签
+            </div>
+        </fieldset>
+    </div>
 </div>
 </body>
 </html>

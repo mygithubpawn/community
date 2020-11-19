@@ -16,16 +16,7 @@
     <div class="row w" style="border-radius: 6px;background-color:#E9ECEF;">
         <!--        左侧-->
         <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title" style="border-right: 20px solid #E9ECEF">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marto-size">
-                <ul>
-                    <li>2</li>
-                    <li>2</li>
-                    <li>w</li>
-                    <li>w</li>
-                    <li>D</li>
-                    <li>D</li>
-                </ul>
-            </div>
+                <div th:insert="~{publicigation/navigation :: sidebar}"></div>
         </div>
         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12" style="background-color: #FFFFFF;">
             <h2 style="margin-top: 10px"><span th:text="${sectionName}"></span></h2>

@@ -3,7 +3,7 @@ body {
 }
 
 .w {
-    width: 1400px;
+    width: 1300px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.88);
 }
@@ -150,7 +150,6 @@ body {
 
 .question-title {
     background-color: #FFFFFF;
-    border-left: 25px solid #E9ECEF;
 }
 
 .question-title-h1 {
@@ -260,7 +259,11 @@ a:hover {
     text-overflow: ellipsis;
     white-space: nowrap
 }
-
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 .fluid-bouutn {
     width: 1200px;
     height: 50px;
@@ -278,7 +281,12 @@ a:hover {
     border-top: 2px solid #00965E;
     height: 50px
 }
-
+.home-tou{
+    box-shadow: 1px 1px 1px 1px rgba(217, 217, 217, 0.77);
+    border-top: 2px solid #00965E;
+    height: 50px;
+    margin-top: 40px;
+}
 .reclo-nav {
     background-color: #FFFFFF;
     box-shadow: 0 0 3px 0 rgba(217, 217, 217, 0.77);
@@ -383,7 +391,20 @@ a:hover {
     margin-right: 5px;
     transition: all 0.2s ease;
 }
-
+.yd1 {
+    width: 100%;
+    height: 650px;
+    min-width: 1200px;
+    border-style: groove;
+    /* 加背景 */
+    background-image: url('../static/images/img/20200413.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 0%;
+    /*  加背景*/
+    border-color: black;
+    border-width: 0px;
+}
 .huif-size:hover,
 .biaoti-wen:hover {
     color: #00965E;
