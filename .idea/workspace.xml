@@ -5,38 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8634802e-5eaf-4042-aab5-714f5adacbee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log/community.log.2020-11-17.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/img/202013.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/img/timg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/md/440.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/md/441.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/md/442.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/md/443.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/background.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pawnSql/employee.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/controller/ManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/md/444.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/management.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/community.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/community.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pawn/community/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pawn/community/dto/PaginationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/dto/PaginationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pawn/community/service/TagCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/service/TagCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDTOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDTOMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/fommunity.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/fommunity.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/editor/tests/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/editor/tests/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/QRcode.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/img/QRcode.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/img/20200429.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/img/20200501.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/background.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/navigation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/public.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publish.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publish.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/question.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/video.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/videos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pawn/community/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pawn/community/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pawn/community/dto/PaginationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pawn/community/dto/PaginationDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pawn/community/service/TagCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pawn/community/service/TagCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleDTOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleDTOMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/fommunity.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/fommunity.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/editor/tests/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/editor/tests/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/QRcode.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/img/20200429.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/img/20200501.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/background.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/navigation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/public.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/publish.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publish.html" afterDir="false" />
@@ -141,7 +149,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images/md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pawnSql" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -159,18 +167,18 @@
       <recent name="com.pawn.community.interceptor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea java\communitypawn\pawnSql" />
       <recent name="E:\idea java\communitypawn\src\main\resources\static\images\md" />
+      <recent name="E:\idea java\communitypawn\src\main\resources" />
       <recent name="E:\idea java\communitypawn\src\main\resources\static\images\img" />
       <recent name="E:\idea java\communitypawn\src\main\resources\static\css" />
-      <recent name="E:\idea java\communitypawn\src\main\resources\static\editor" />
-      <recent name="E:\idea java\communitypawn\src\main\resources\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\idea java\communitypawn\src\main\resources\static\images\md" />
       <recent name="E:\idea java\communitypawn\src\main\resources\static\images\img" />
       <recent name="E:\idea java\communitypawn\src\main\resources\static\js\editormd" />
       <recent name="E:\idea java\communitypawn\src\main\resources\static\js" />
       <recent name="E:\idea java\communitypawn\src\main\resources\templates\publicigation" />
-      <recent name="E:\idea java\communitypawn\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CommunitypawnApplication">
@@ -275,7 +283,9 @@
       <workItem from="1605573398831" duration="18899000" />
       <workItem from="1605659775608" duration="7150000" />
       <workItem from="1605668913071" duration="17453000" />
-      <workItem from="1605746439456" duration="19318000" />
+      <workItem from="1605746439456" duration="24493000" />
+      <workItem from="1605832707407" duration="30604000" />
+      <workItem from="1605919241966" duration="1565000" />
     </task>
     <servers />
   </component>
@@ -303,46 +313,46 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1605345015035" />
-    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605602391709">
+    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605841392225">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605602391709" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1604968626421">
+    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605841392225" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1605834837522">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604968626421" />
-    <state width="1489" height="249" key="GridCell.Tab.0.bottom" timestamp="1605776586425">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1605834837522" />
+    <state width="1478" height="192" key="GridCell.Tab.0.bottom" timestamp="1605920371697">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605776586425" />
-    <state width="1489" height="249" key="GridCell.Tab.0.center" timestamp="1605776586425">
+    <state width="1478" height="192" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
+    <state width="1478" height="192" key="GridCell.Tab.0.center" timestamp="1605920371696">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605776586425" />
-    <state width="1489" height="249" key="GridCell.Tab.0.left" timestamp="1605776586425">
+    <state width="1478" height="192" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605920371696" />
+    <state width="1478" height="192" key="GridCell.Tab.0.left" timestamp="1605920371696">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605776586425" />
-    <state width="1489" height="249" key="GridCell.Tab.0.right" timestamp="1605776586425">
+    <state width="1478" height="192" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605920371696" />
+    <state width="1478" height="192" key="GridCell.Tab.0.right" timestamp="1605920371697">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605776586425" />
-    <state width="1489" height="249" key="GridCell.Tab.1.bottom" timestamp="1605776586426">
+    <state width="1478" height="192" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
+    <state width="1478" height="192" key="GridCell.Tab.1.bottom" timestamp="1605920371698">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605776586426" />
-    <state width="1489" height="249" key="GridCell.Tab.1.center" timestamp="1605776586425">
+    <state width="1478" height="192" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605920371698" />
+    <state width="1478" height="192" key="GridCell.Tab.1.center" timestamp="1605920371697">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1605776586425" />
-    <state width="1489" height="249" key="GridCell.Tab.1.left" timestamp="1605776586425">
+    <state width="1478" height="192" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
+    <state width="1478" height="192" key="GridCell.Tab.1.left" timestamp="1605920371697">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1605776586425" />
-    <state width="1489" height="249" key="GridCell.Tab.1.right" timestamp="1605776586426">
+    <state width="1478" height="192" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
+    <state width="1478" height="192" key="GridCell.Tab.1.right" timestamp="1605920371698">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1489" height="249" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1605776586426" />
+    <state width="1478" height="192" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1605920371698" />
     <state width="1478" height="306" key="GridCell.Tab.2.bottom" timestamp="1605194420994">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -411,10 +421,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="426" y="200" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1605770486053" />
-    <state x="430" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605770402634">
+    <state x="430" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605919951955">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="430" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1605770402634" />
+    <state x="430" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1605919951955" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

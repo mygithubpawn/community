@@ -56,7 +56,7 @@
         LEFT JOIN `user`ON article.creator=`user`.id
         LEFT JOIN details ON article.id=details.id
         where article.id=details.id
-         AND article.title REGEXP #{title}
+         AND article.title LIKE "%"#{title}"%"
         ORDER BY article.gmt_create DESC
         Limit #{page},#{size}
 </select>

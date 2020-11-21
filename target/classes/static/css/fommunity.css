@@ -172,7 +172,10 @@ body {
 }
 
 .video {
-    padding: 30px 10px 30px 10px;
+    height: 280px;
+    width: 200px;
+    padding: 20px 10px 0 10px;
+    float: left;
 }
 
 .BorderStyle {
@@ -195,7 +198,15 @@ body {
     -webkit-line-clamp: 2;
     font-size: 14px;
 }
-
+.td-1yc{
+    width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
 a:hover {
     text-decoration: none;
     cursor: pointer;

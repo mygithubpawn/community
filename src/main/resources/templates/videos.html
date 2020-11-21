@@ -12,9 +12,8 @@
 <div th:insert="~{publicigation/navigation :: nav}"></div>
 <!--主体-->
 <div class="container-fluid main">
-    <div class="rower w">
-
-        <div class="col-xs-6 col-md-2 video" th:each="relatedVideos:${relatedVideos}">
+    <div class="row w">
+        <div class="video" th:each="relatedVideos:${relatedVideos}">
             <div class="BorderStyle">
                 <a th:href="@{/video(page=${relatedVideos.page},aid=${relatedVideos.aid})}" class="thumbnail">
                     <img th:src="${relatedVideos.url}">
@@ -22,19 +21,24 @@
                 <div class="InnerMargin">
                     <p><a class="hideText" th:href="@{/video(page=${relatedVideos.page},aid=${relatedVideos.aid})}"
                           th:text="${relatedVideos.heading}"></a></p>
+                    <br>
                     <p class="upTheLord">
-                        <i class="fa fa-calendar-o" aria-hidden="true" title="发布的时间"></i>
-                        <span th:text="${#dates.format(relatedVideos.gmtCreate,'yyyy-MM-dd')}"></span>
-                        </br>
-                        <i class="fa fa-address-book" aria-hidden="true" title="up主"></i>
+                        <i class="fa fa-address-book" style="color: #00965E" aria-hidden="true" title="up主"></i>
                         <a th:href="${relatedVideos.address}" th:text="${relatedVideos.name}"></a>
+                            ~~
+                        <i class="fa fa-calendar-o" aria-hidden="true" style="color: #499ef3" title="发布的时间"></i>
+                        <span th:text="${#dates.format(relatedVideos.gmtCreate,'yyyy-MM-dd')}"></span>
+
                     </p>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 </div>
+<!--底部-->
+<div th:insert="~{publicigation/footer :: foot}"></div>
 </body>
 </html>
 

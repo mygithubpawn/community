@@ -4,7 +4,7 @@
 - java
 - mysql
 - springboot
-- mabiys
+- mybatis
 - thymeleaf
 - html
 - css

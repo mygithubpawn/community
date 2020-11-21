@@ -18,7 +18,7 @@ public class TagCache {
 
         Tag framework = new Tag();
         framework.setCategoryName("后端");
-        framework.setTags(Arrays.asList("php", "java", "python", "node.js", "golang", "c++", "c#", "spring", "c++", "springboot", "django", "爬虫", "swoole", "rudy", "nap.net", "scala", "rust", "lavarel"));
+        framework.setTags(Arrays.asList("php", "java", "python", "node.js","数据结构", "golang", "c++", "c#", "spring", "c++", "springboot", "django", "爬虫", "swoole", "rudy", "nap.net", "scala", "rust", "lavarel"));
         tagList.add(framework);
 
         Tag server = new Tag();

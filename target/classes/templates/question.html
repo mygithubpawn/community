@@ -11,7 +11,7 @@
 <div th:insert="~{publicigation/navigation :: nav}"></div>
 <!--顶部结束-->
 <div class="container-fluid main profile">
-    <div class="rower w" style="border-radius: 6px;background-color:#E9ECEF;">
+    <div class="row w" style="border-radius: 6px;background-color:#E9ECEF;">
         <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12"
              style="padding: 6px;  background-color:#E9ECEF;margin-top: 100px">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -197,10 +197,14 @@
         </div>
         <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 question-title">
             <!--            二维码-->
-            <div style="padding: 20px">
-                <h4 style="padding-bottom: 10px">怡红院源码仓库地址</h4>
-                <a href="https://gitee.com/jade_purple">
-                    <img class="img-thumbnail question-wechat" src="/static/images/img/QRcode.jpg">
+            <div style="padding: 20px;">
+                <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold">怡红院源码仓库地址</h4>
+                <a href="https://github.com/mygithubpawn/-" target="_blank" title="怡红院源码github仓库地址">
+                    <img class="img-thumbnail question-wechat" th:src="@{/images/img/QRcode.jpg}">
+                </a>
+                <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold;margin-top: 20px">怡红院源码仓库地址</h4>
+                <a href="https://github.com/mygithubpawn/-" target="_blank" title="怡红院源码github仓库地址">
+                    <img class="img-thumbnail question-wechat" th:src="@{/images/img/timg.jpg}">
                 </a>
                 <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#95D1BA ">
                 <!--            相关问题-->
@@ -218,5 +222,7 @@
     </div>
 </div>
 </div>
+<!--底部-->
+<div th:insert="~{publicigation/footer :: foot}"></div>
 </body>
 </html>

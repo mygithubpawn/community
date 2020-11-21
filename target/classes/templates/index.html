@@ -32,9 +32,9 @@
             <div class="layui-carousel" id="test1" style="margin-top: 15px;">
                 <div carousel-item="">
                     <div><img th:src="@{/images/img/20200321.jpg}" style="width: 100%;"/></div>
-                    <div><img th:src="@{/images/img/20200413.jpg}" style="width: 100%;"/></div>
-                    <div><img th:src="@{/images/img/20200429.jpg}" style="width: 100%;"/></div>
-                    <div><img th:src="@{/images/img/20200501.jpg}" style="width: 100%;"/></div>
+                    <div><img th:src="@{/images/img/20200627.jpg}" style="width: 100%;"/></div>
+                    <div><img th:src="@{/images/img/20200815.jpg}" style="width: 100%;"/></div>
+                    <div><img th:src="@{/images/img/20201012.jpg}" style="width: 100%;"/></div>
                     <div><img th:src="@{/images/img/20200522.jpg}" style="width: 100%;"/></div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     carousel.render({
                         elem: '#test1'
                         , width: '100%' //设置容器宽度
-                        , height: '140px'
+                        , height: '190px'
                         , arrow: 'always' //始终显示箭头
                         // ,anim: 'fade' //切换动画方式
                     });
@@ -75,13 +75,11 @@
                 <div class="media-body">
                     <h4 class="media-heading bain-2">
                         <a class="a-biaoti" th:href="@{'/question/'+${articleDeList.id}}"
-                           th:text="${articleDeList.title}"></a>
+                                   th:text="${articleDeList.title}"></a>
                     </h4>
-                    <h4 class="media-heading" th:text="${articleDeList.id}" style="float: right"></h4>
                     <span class="hideText" th:text="${articleDeList.description}"></span> </br>
                     <span class="text-desc">
-                        <i class="fa fa-user" aria-hidden="true"title="楼主" style="color:#8362C6"></i>
-<!--                        <span class="glyphicon glyphicon-user" style="color: darkviolet"></span>-->
+                        <i class="fa fa-user" aria-hidden="true" title="楼主" style="color:#8362C6"></i>
                          <span th:text="${articleDeList.name}"></span>&nbsp;
                          <i class="fa fa-eye" aria-hidden="true" title="浏览" style="color: #009BBF"></i>
                        <span th:text="${articleDeList.viewCount}"></span>&nbsp;
@@ -91,7 +89,8 @@
                       <span class="glyphicon glyphicon-thumbs-up" title="点赞"
                             style="color: #009A61;margin-left: 4px;"></span>
                         <span th:text="${articleDeList.likeCount}"></span>&nbsp;
-                        <span style="color:#009A61" th:text="${#dates.format(articleDeList.gmtCreate,'yyyy-MM月dd日 ')}"></span>
+                        <span style="color:#009A61"
+                              th:text="${#dates.format(articleDeList.gmtCreate,'yyyy-MM月dd日 ')}"></span>
                     </span>
                 </div>
                 <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #EBF7F3;">
@@ -132,12 +131,12 @@
         </div>
         <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
             <div style="padding: 20px">
-                <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold">怡红院源码仓库地址</h4>
-                <a href="https://github.com/mygithubpawn/-"target="_blank" title="怡红院源码github仓库地址">
+                <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold">Mybatis框架笔记+源码</h4>
+                <a href="https://gitee.com/jade_purple" target="_blank" title="Mybatis框架笔记+源码">
                     <img class="img-thumbnail question-wechat" th:src="@{/images/img/QRcode.jpg}">
                 </a>
                 <h4 style="padding-bottom: 10px;color:#009A61;font-weight: bold;margin-top: 20px">怡红院源码仓库地址</h4>
-                <a href="https://github.com/mygithubpawn/-"target="_blank" title="怡红院源码github仓库地址">
+                <a href="https://github.com/mygithubpawn/-" target="_blank" title="怡红院源码github仓库地址">
                     <img class="img-thumbnail question-wechat" th:src="@{/images/img/timg.jpg}">
                 </a>
             </div>
