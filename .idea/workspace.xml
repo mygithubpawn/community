@@ -5,52 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8634802e-5eaf-4042-aab5-714f5adacbee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pawnSql/employee.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/controller/ManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/md/444.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/management.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/community.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/community.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pawn/community/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pawn/community/dto/PaginationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/dto/PaginationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pawn/community/service/TagCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pawn/community/service/TagCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDTOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDTOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/fommunity.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/fommunity.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/img/20200429.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/img/20200501.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/background.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publicigation/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publicigation/public.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/publish.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/publish.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/video.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/videos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pawn/community/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pawn/community/controller/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pawn/community/dto/PaginationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pawn/community/dto/PaginationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pawn/community/service/TagCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pawn/community/service/TagCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleDTOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleDTOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/fommunity.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/fommunity.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/img/20200429.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/img/20200501.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/background.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/publicigation/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publicigation/public.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/publish.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/publish.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/video.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/videos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +109,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pawnSql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -285,7 +245,8 @@
       <workItem from="1605668913071" duration="17453000" />
       <workItem from="1605746439456" duration="24493000" />
       <workItem from="1605832707407" duration="30604000" />
-      <workItem from="1605919241966" duration="1565000" />
+      <workItem from="1605919241966" duration="2725000" />
+      <workItem from="1605922075292" duration="573000" />
     </task>
     <servers />
   </component>
@@ -317,42 +278,42 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605841392225" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1605834837522">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1605921963199">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1605834837522" />
-    <state width="1478" height="192" key="GridCell.Tab.0.bottom" timestamp="1605920371697">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1605921963199" />
+    <state width="1478" height="356" key="GridCell.Tab.0.bottom" timestamp="1605922584274">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
-    <state width="1478" height="192" key="GridCell.Tab.0.center" timestamp="1605920371696">
+    <state width="1478" height="356" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605922584274" />
+    <state width="1478" height="356" key="GridCell.Tab.0.center" timestamp="1605922584274">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605920371696" />
-    <state width="1478" height="192" key="GridCell.Tab.0.left" timestamp="1605920371696">
+    <state width="1478" height="356" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605922584274" />
+    <state width="1478" height="356" key="GridCell.Tab.0.left" timestamp="1605922584274">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605920371696" />
-    <state width="1478" height="192" key="GridCell.Tab.0.right" timestamp="1605920371697">
+    <state width="1478" height="356" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605922584273" />
+    <state width="1478" height="356" key="GridCell.Tab.0.right" timestamp="1605922584274">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
-    <state width="1478" height="192" key="GridCell.Tab.1.bottom" timestamp="1605920371698">
+    <state width="1478" height="356" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605922584274" />
+    <state width="1478" height="356" key="GridCell.Tab.1.bottom" timestamp="1605922584275">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605920371698" />
-    <state width="1478" height="192" key="GridCell.Tab.1.center" timestamp="1605920371697">
+    <state width="1478" height="356" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605922584275" />
+    <state width="1478" height="356" key="GridCell.Tab.1.center" timestamp="1605922584275">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
-    <state width="1478" height="192" key="GridCell.Tab.1.left" timestamp="1605920371697">
+    <state width="1478" height="356" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1605922584275" />
+    <state width="1478" height="356" key="GridCell.Tab.1.left" timestamp="1605922584275">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1605920371697" />
-    <state width="1478" height="192" key="GridCell.Tab.1.right" timestamp="1605920371698">
+    <state width="1478" height="356" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1605922584275" />
+    <state width="1478" height="356" key="GridCell.Tab.1.right" timestamp="1605922584275">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1478" height="192" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1605920371698" />
+    <state width="1478" height="356" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1605922584275" />
     <state width="1478" height="306" key="GridCell.Tab.2.bottom" timestamp="1605194420994">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
