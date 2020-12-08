@@ -48,6 +48,7 @@ public class ProfileController {
                           Model model) {
 
         //判断当前登陆状态==>已由拦截器接管
+        PaginationDTO paginationDTO = new PaginationDTO();
 
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
@@ -59,7 +60,6 @@ public class ProfileController {
             //用户的所有记录条数
             Integer integer = articleService.WhereCount(user.getId());
             //分页处理对象
-            PaginationDTO paginationDTO = new PaginationDTO();
             paginationDTO.setPaginagtion(integer, page, size);
             //位置偏移
             page = size * (page - 1);
@@ -78,7 +78,7 @@ public class ProfileController {
             model.addAttribute("sectionName", "最新回复");
             //获取回复条数
             Integer IfiInteger = notificationService.inSumId(user.getId());
-            PaginationDTO paginationDTO = new PaginationDTO();
+//            PaginationDTO paginationDTO = new PaginationDTO();
             paginationDTO.setPaginagtion(IfiInteger, page, size);
             //位置偏移
             page = size * (page - 1);

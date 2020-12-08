@@ -2,10 +2,8 @@ package com.pawn.community.controller;
 
 import com.pawn.community.dto.ArticleDetailsDTO;
 import com.pawn.community.dto.PaginationDTO;
-import com.pawn.community.schedule.HotTagCache;
 import com.pawn.community.service.ArticleDetailsDTOServiceImpl;
 import com.pawn.community.service.ArticleServiceImpl;
-import com.pawn.community.service.DetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,11 +27,12 @@ public class ManagementController {
     private ArticleDetailsDTOServiceImpl detailsDTOService;
     @Autowired
     private ArticleServiceImpl articleService;
+
     @GetMapping("/management")
-    public String management(  Model model,
-                               @RequestParam(name = "title", required = false) String title,
-                               @RequestParam(name = "page", defaultValue = "1") Integer page,
-                               @RequestParam(name = "size", defaultValue = "10") Integer size){
+    public String management(Model model,
+                             @RequestParam(name = "title", required = false) String title,
+                             @RequestParam(name = "page", defaultValue = "1") Integer page,
+                             @RequestParam(name = "size", defaultValue = "10") Integer size) {
 
         if (title != null && title != "") {
             //获取所有的记录条数
@@ -51,20 +50,20 @@ public class ManagementController {
             model.addAttribute("articleDetailsDTOS", articleDetailsDTOS);
             //分页
             model.addAttribute("pages", paginationDTO);
-        }else {
-        //获取所有的记录条数
-        Integer totalCount = articleService.count();
-        PaginationDTO paginationDTO = new PaginationDTO();
-        paginationDTO.setPaginagtion(totalCount, page, size);
-        page = size * (page - 1);
-        Map<String, Integer> map = new HashMap<>();
-        map.put("page", page);
-        map.put("size", size);
-        List<ArticleDetailsDTO> articleDetailsDTOS = detailsDTOService.ArticleDetailsList(map);
-        //文章类容
-        model.addAttribute("articleDetailsDTOS", articleDetailsDTOS);
-        //分页
-        model.addAttribute("pages", paginationDTO);
+        } else {
+            //获取所有的记录条数
+            Integer totalCount = articleService.count();
+            PaginationDTO paginationDTO = new PaginationDTO();
+            paginationDTO.setPaginagtion(totalCount, page, size);
+            page = size * (page - 1);
+            Map<String, Integer> map = new HashMap<>();
+            map.put("page", page);
+            map.put("size", size);
+            List<ArticleDetailsDTO> articleDetailsDTOS = detailsDTOService.ArticleDetailsList(map);
+            //文章类容
+            model.addAttribute("articleDetailsDTOS", articleDetailsDTOS);
+            //分页
+            model.addAttribute("pages", paginationDTO);
 
         }
         return "management";

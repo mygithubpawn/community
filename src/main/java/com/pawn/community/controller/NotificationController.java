@@ -31,6 +31,7 @@ public class NotificationController {
         }
         List<Notification> statusList = notificationService.checkStatus(id);
         for (Notification notification : statusList) {
+
             if (notification.getStatus()==0){
                 //修改评论属性为已读
                 notificationService.notViewed(id);

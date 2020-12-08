@@ -108,7 +108,7 @@ public class CommentController {
 //        List<Secomment> secomments = secommentService.SelSecondaryComment(commentCreateDTO.getParentId());
 
         if (user.getId() == commentCreateDTO.getType()) {
-            status = 1;
+            status = 0;
         }
         //添加评论状态
         Notification notification = new Notification(user.getId(), commentCreateDTO.getType(), commentCreateDTO.getParentId(), NotificationTypeEnum.REPLY_QUESTION.getType(), System.currentTimeMillis(), status);

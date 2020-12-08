@@ -2,7 +2,6 @@ package com.pawn.community.controller;
 
 import com.pawn.community.dto.ArticleDetailsDTO;
 import com.pawn.community.dto.PaginationDTO;
-import com.pawn.community.mapper.UserMapper;
 import com.pawn.community.schedule.HotTagCache;
 import com.pawn.community.service.ArticleDetailsDTOServiceImpl;
 import com.pawn.community.service.ArticleServiceImpl;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
